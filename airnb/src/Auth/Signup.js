@@ -2,13 +2,14 @@ import React from "react";
 import "../App.css";
 import { useState } from "react";
 import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Signup = ({ setSignuppage, signuppage }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate=useNavigate()
   async function handleSubmit(e) {
     e.preventDefault();
     try {
@@ -18,6 +19,7 @@ const Signup = ({ setSignuppage, signuppage }) => {
         password,
       });
       alert("registerd sucessfully");
+      navigate("/login")
     } catch (e) {
       alert("Register failed! try again");
     }
@@ -31,7 +33,8 @@ const Signup = ({ setSignuppage, signuppage }) => {
           <span className="text-center font-bold">Log in or sign up</span>
         </div>
         <hr className="h-[2px] mt-2 w-full bg-slate-200"></hr>
-        <div className="mt-4 font-semibold ml-4"> Welcome to Airbnb</div>
+        <div className="mt-4 font-semibold ml-4"> Welcome to Airbnb </div>
+        <div className="text-[12px] ml-4 mt-2">have an account? <Link to="/login" className="font-semibold text-[14px]">login</Link></div>
 
         <form
           onSubmit={handleSubmit}

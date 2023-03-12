@@ -8,6 +8,7 @@ export function User(){
 }
 export const UserContextProvider=({children})=>{
     const [user,setUser]=useState(null)
+    const[place,setPlace]=useState([])
     useEffect(()=>{
         if(!user){
              axios.get("/profile").then(({data})=>{
@@ -16,8 +17,10 @@ export const UserContextProvider=({children})=>{
         }
 
     },[])
+   
+
     return(
-        <UserContext.Provider value={{user,setUser}}>
+        <UserContext.Provider value={{user,setUser,place}}>
          {children}
         </UserContext.Provider>
         

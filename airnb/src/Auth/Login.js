@@ -38,6 +38,7 @@ const Login = ({ setLoginpage, loginpage }) => {
           </div>
           <hr className="h-[2px] mt-2 w-full bg-slate-200"></hr>
           <div className="mt-4 font-semibold ml-4"> Welcome to Airbnb</div>
+          <div className="text-[12px] ml-4 mt-2">don't have an account? <Link to="/signup" className="font-semibold text-[14px]">Signup</Link></div>
 
           <form
             onSubmit={hanldeLogin}
