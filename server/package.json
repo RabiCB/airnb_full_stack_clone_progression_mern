@@ -6,8 +6,16 @@
   "scripts": {
     "dev": "node server.js"
   },
-  "keywords": [],
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyclic-software/starter-express-api.git"
+  },
   "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyclic-software/starter-express-api/issues"
+  },
+  "homepage": "https://github.com/cyclic-software/starter-express-api#readme",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
